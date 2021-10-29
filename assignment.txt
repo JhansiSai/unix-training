@@ -11,7 +11,7 @@ If you delete the original file, the soft link has no value, because it points t
 
 But in the case of hard link, it is entirely opposite. Even if you delete the original file, the hard link will still has the data of the original file. 
 Because hard link acts as a mirror copy of the original file.
-4.chmod g+wr test
+4.chgrp user2 test | chmod g+wr
 5.chmod g-w test
 6.chmod o+w file
 7.chmod o-w file

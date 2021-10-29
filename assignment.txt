@@ -8,7 +8,6 @@ cat >skillset
 -- rm skillset
 --A soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. 
 If you delete the original file, the soft link has no value, because it points to a non-existent file.
-
 But in the case of hard link, it is entirely opposite. Even if you delete the original file, the hard link will still has the data of the original file. 
 Because hard link acts as a mirror copy of the original file.
 4.chgrp user2 test | chmod g+wr
@@ -18,6 +17,7 @@ Because hard link acts as a mirror copy of the original file.
 8.chgrp user3 employeelist
 9.chown user5 employeelist
 10.wc -l employeelist
+
 
 slide ----->47
 1.vi file1
@@ -31,7 +31,74 @@ slide ----->47
 9.cat file1 file2 file3 file4 file5 >file10 2>&1
 10.cp file1 file2 2>errorlog
 
+
 slide ---->55
 1.head -25 file1 | tail +10
 2.head -10 file1 | tail +10
-3.ls -t | head -1
+3.ls -tl | head -2 | tail +2
+4.ls -l | sort +4 -5 | head -2 | tail +2
+5.wc -l filename
+  ls -lt | head -31 | tail +2
+
+
+slide --->61
+1.grep "a" filename
+2.grep "^The" file
+3.grep ".$" file
+4.ls ?[a,b,c]*
+5.grep [def,deef,deeeef] file
+6.grep -v "^[0-9]" filelist
+7.grep -v "." filename
+8.
+9.find . -type d
+
+
+slide --->63
+1.ls -l | cat >file
+2.sort -r filename
+3.ls -i | sort -n
+4.ls -l | sort -r +2 -4
+5.ls -l | sort +4 -5 -o sortedfile
+
+
+slide --->93
+1.vi try91_slide
+then press i and insert the content.
+
+
+
+slide --->94
+1.O
+2.go to second line ->dd->u
+3.:/bc
+4.:1,$s/number/ /g
+5.:1,1s/c/C/g
+6.:1,$s/ /\t/g
+
+
+slide --->116
+1.at now+3 minute
+  echo "hello" >filename
+2.at now+10 day
+  ls > processfile
+3.at now+1 day
+  echo "Happy Birthday my dear frd" >filename
+
+
+slide --->118
+1.crontab
+  5 55 * * * ls >filename
+  ^d
+  crontab -l
+  to edit the file --> crontab -e 
+
+
+
+
+
+
+
+
+
+
+
